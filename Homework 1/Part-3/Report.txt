@@ -1,0 +1,61 @@
+Report Problem 1:
+(d,29830)
+(w,59844)
+(s,66069)
+(e,19116)
+(p,27860)
+(x,14)
+(z,79)
+(a,85667)
+(t,126395)
+(i,62305)
+(b,45597)
+(y,25888)
+(k,9491)
+(u,9185)
+(h,60736)
+(o,43590)
+(n,26834)
+(f,36930)
+(q,2378)
+(j,3354)
+(v,5745)
+(r,14396)
+(g,21021)
+(l,29697)
+(m,55800)
+(c,34694)
+
+
+Report Problem 2:
+
+My algorithm initially was focused on using a matrix join.  However I realized that it was taking too long to compute the join.
+Subsequent operations only made it slower (huge search space), and it failed to approach the problem of removing friends.  
+
+The next idea I tried involved starting out by mapping out every single pair connections and the node distance to travel between them.
+Since many nodes are friends with each other,  if we create a list of all relationships levels that each person has to them we can filter the people who already are friends.
+In this vein, it was similar to doing Erdos numbers.  It also allowed me to reduce and count mutual friends who were not friends yet.
+
+After cutting out all the friends, I focused on transforming my way over to (Key, (MutualFriend, Count))
+
+Output
+(992,[934, 943, 990, 1028, 1008, 939, 1014, 1013, 946, 953])
+(8940,[8938, 8944, 8943, 8939, 27386, 8946, 21732, 8941, 35523, 13306])
+(8943,[8944, 8939, 8938, 8941, 8940, 8946, 47350, 40702, 35523, 21732])
+(9013,[9012, 16019, 8986, 8987, 9015, 9014, 8991, 8990, 8994, 9000])
+(9010,[35494, 1688, 2687, 2647, 2698, 1694, 2659, 2708, 2668, 21254])
+(9011,[8986, 25879, 8994, 8993, 8992, 45246, 9012, 9000, 6529, 8995])
+(9018,[320, 9019, 9020, 9021, 9022, 9016, 9017, 317, 9023])
+(9297,[9298, 9299, 9300])
+(9930,[14346, 14928, 15126, 10468, 16000, 10488, 39013, 22089, 21238, 39012])
+(9963,[29817, 30413, 42532, 25843, 14969, 17461, 43066, 14264, 30455, 14282])
+
+Report Problem 3:
+Algorithm:
+Did not have time to get to this one.
+
+The only thing I can think of that takes advantage of hashing is when performing a map you hash them in such a way that 
+i and k values both map to the 'same' bucket in two hashmaps.  You then would have two reducers that takes any two hashmaps 
+and an i / j and grabs the hash value from each map and computers the standard a*b.
+
+
